@@ -1,8 +1,12 @@
+import { auth } from "../_lib/auth";
+
 export const metadata = {
   title: "account",
 };
-function page() {
-  return <div>Account</div>;
+async function page() {
+  const session = await auth();
+  const firstName = session.user.name.split(" ").at(0);
+  return <div>{`Welcome ${firstName}`}</div>;
 }
 
 export default page;

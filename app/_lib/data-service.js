@@ -55,7 +55,7 @@ export const getCabins = async function () {
 // Guests are uniquely identified by their email address
 export async function getGuest(email) {
   const { data, error } = await supabase
-    .from("guests")
+    .from("guest")
     .select("*")
     .eq("email", email)
     .single();
@@ -66,7 +66,7 @@ export async function getGuest(email) {
 
 export async function getBooking(id) {
   const { data, error, count } = await supabase
-    .from("bookings")
+    .from("booking")
     .select("*")
     .eq("id", id)
     .single();
@@ -81,7 +81,7 @@ export async function getBooking(id) {
 
 export async function getBookings(guestId) {
   const { data, error, count } = await supabase
-    .from("bookings")
+    .from("booking")
     // We actually also need data on the cabins as well. But let's ONLY take the data that we actually need, in order to reduce downloaded data.
     .select(
       "id, created_at, startDate, endDate, numNights, numGuests, totalPrice, guestId, cabinId, cabins(name, image)",
@@ -104,7 +104,7 @@ export async function getBookedDatesByCabinId(cabinId) {
 
   // Getting all bookings
   const { data, error } = await supabase
-    .from("bookings")
+    .from("booking")
     .select("*")
     .eq("cabinId", cabinId)
     .or(`startDate.gte.${today},status.eq.checked-in`);
@@ -154,7 +154,7 @@ export async function getCountries() {
 // CREATE
 
 export async function createGuest(newGuest) {
-  const { data, error } = await supabase.from("guests").insert([newGuest]);
+  const { data, error } = await supabase.from("guest").insert([newGuest]);
 
   if (error) {
     console.error(error);
@@ -166,7 +166,7 @@ export async function createGuest(newGuest) {
 
 export async function createBooking(newBooking) {
   const { data, error } = await supabase
-    .from("bookings")
+    .from("booking")
     .insert([newBooking])
     // So that the newly created object gets returned!
     .select()
@@ -184,9 +184,10 @@ export async function createBooking(newBooking) {
 // UPDATE
 
 // The updatedFields is an object which should ONLY contain the updated data
+/*
 export async function updateGuest(id, updatedFields) {
   const { data, error } = await supabase
-    .from("guests")
+    .from("guest")
     .update(updatedFields)
     .eq("id", id)
     .select()
@@ -201,7 +202,7 @@ export async function updateGuest(id, updatedFields) {
 
 export async function updateBooking(id, updatedFields) {
   const { data, error } = await supabase
-    .from("bookings")
+    .from("booking")
     .update(updatedFields)
     .eq("id", id)
     .select()
@@ -218,7 +219,7 @@ export async function updateBooking(id, updatedFields) {
 // DELETE
 
 export async function deleteBooking(id) {
-  const { data, error } = await supabase.from("bookings").delete().eq("id", id);
+  const { data, error } = await supabase.from("booking").delete().eq("id", id);
 
   if (error) {
     console.error(error);
@@ -226,3 +227,4 @@ export async function deleteBooking(id) {
   }
   return data;
 }
+*/

@@ -4,7 +4,7 @@ import Image from "next/image";
 import TextExpander from "@/app/compound/TextExpander";
 import Reservation from "../../compound/Reservation";
 import { Suspense } from "react";
-import Spinner from "@/starter/components/Spinner";
+import Spinner from "@/app/compound/Spinner";
 // PLACEHOLDER DATA
 // const cabin = {
 //   id: 89,
@@ -74,7 +74,7 @@ export default async function Page({ params }) {
       </div>
 
       <div>
-        <h2 className="text-5xl font-semibold text-center">
+        <h2 className="text-5xl font-semibold text-center mb-10 text-accent-500">
           Reserve today. Pay on arrival.
         </h2>
 
