@@ -1,4 +1,5 @@
 "use client";
+
 import {
   CalendarDaysIcon,
   HomeIcon,
@@ -28,22 +29,27 @@ const navLinks = [
 
 function SideNavigation() {
   const pathname = usePathname();
+
   return (
-    <nav className="border-r border-primary-900">
-      <ul className="flex flex-col gap-2 h-full text-lg">
+    <nav className="border-b md:border-b-0 md:border-r border-primary-900 overflow-x-auto">
+      {/* MOBILE = row | DESKTOP = column */}
+      <ul className="flex flex-row justify-between md:justify-normal  md:flex-col gap-2 text-sm md:text-lg whitespace-nowrap">
         {navLinks.map((link) => (
-          <li key={link.name}>
+          <li key={link.name} className="flex-shrink-0">
             <Link
-              className={`py-3 px-5 hover:bg-primary-900 hover:text-primary-100 transition-colors flex items-center gap-4 font-semibold text-primary-200 ${pathname === link.href ? "bg-primary-900" : ""}`}
               href={link.href}
+              className={`py-2 px-3 md:py-3 md:px-5 flex items-center gap-2 md:gap-4 font-semibold text-primary-200 hover:bg-primary-900 hover:text-primary-100 transition-colors ${
+                pathname === link.href ? "bg-primary-900" : ""
+              }`}
             >
               {link.icon}
-              <span>{link.name}</span>
+              <span className="hidden  md:inline">{link.name}</span>
             </Link>
           </li>
         ))}
 
-        <li className="mt-auto">
+        {/* SIGN OUT */}
+        <li className="flex-shrink-0 md:mt-auto">
           <SignOutButton />
         </li>
       </ul>

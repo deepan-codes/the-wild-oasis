@@ -3,11 +3,22 @@ import { TrashIcon } from "@heroicons/react/24/solid";
 import { deleteBooking } from "../_lib/action";
 import { useTransition } from "react";
 import SpinnerMini from "@/app/compound/SpinnerMini";
+import toast from "react-hot-toast";
 function DeleteReservation({ bookingId }) {
   const [isPending, startTran] = useTransition();
   function handleDelete() {
-    console.log("DELETE.........");
-    startTran(() => deleteBooking(bookingId));
+    const ok = confirm("Are you sure you want to delete?");
+    if (!ok) {
+      return;
+    }
+    startTran(async () => {
+      try {
+        await deleteBooking(bookingId);
+        toast.success("Deleted successfully ✅");
+      } catch (err) {
+        toast.error("Delete failed ❌");
+      }
+    });
   }
   return (
     <button

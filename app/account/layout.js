@@ -1,12 +1,12 @@
 import SideNavigation from "../compound/SideNavigation";
 import "../_style/globals.css";
-function layout({ children }) {
+
+export default function layout({ children }) {
   return (
-    <div className="grid grid-cols-[18rem_1fr] gap-9 h-full">
+    <div className="grid grid-rows-[auto_1fr] md:grid-rows-none md:grid-cols-[18rem_1fr] min-h-screen">
       <SideNavigation />
-      <main>{children}</main>
+
+      <main className="w-full">{children}</main>
     </div>
   );
 }
-
-export default layout;

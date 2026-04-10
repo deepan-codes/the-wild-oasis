@@ -4,7 +4,7 @@ import Header from "./compound/Header";
 import "./_style/globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { ReservationProvider } from "../app/compound/ReservationContext";
-
+import { Toaster } from "react-hot-toast";
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -22,8 +22,12 @@ function layout({ children }) {
       <body
         className={`${josefin.className} bg-primary-950 min-h-screen text-primary-100 flex flex-col`}
       >
+        <div>
+          <Toaster />
+        </div>
+
         <Header />
-        <div className="flex-1 px-8 py-12 grid  h-full">
+        <div className="flex-1 px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 grid  h-full">
           <main className="mx-auto w-full max-w-7xl ">
             <ReservationProvider>{children}</ReservationProvider>
           </main>

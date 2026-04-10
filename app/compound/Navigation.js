@@ -4,8 +4,8 @@ export default async function Navigation() {
   const session = await auth();
   console.log(session);
   return (
-    <nav className="z-10 text-xl">
-      <ul className="flex gap-8 items-center">
+    <nav className="z-10 text-base sm:text-lg md:text-xl">
+      <ul className="flex gap-3 sm:gap-5 md:gap-8 items-center">
         <li>
           <Link
             href="/cabins"

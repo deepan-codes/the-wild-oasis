@@ -1,4 +1,6 @@
 import { updateBooking } from "@/app/_lib/action";
+import toast from "react-hot-toast";
+
 export default function Page({ params }) {
   // CHANGE
   // const reservationId = 23;
@@ -11,7 +13,7 @@ export default function Page({ params }) {
       </h2>
 
       <form
-        className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+        className="bg-primary-900 py-6 sm:py-8 px-4 sm:px-8 md:px-12 text-lg flex gap-6 flex-col"
         action={updateBooking}
       >
         <div className="space-y-2">

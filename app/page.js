@@ -14,7 +14,7 @@ function Home() {
       />
 
       <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl text-primary-50 mb-10 tracking-tight font-normal">
           Welcome to paradise.
         </h1>
         <Link
