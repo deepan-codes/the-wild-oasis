@@ -273,11 +273,12 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ## 🙏 Acknowledgements
 
-- Design inspired by luxury alpine retreat aesthetics
-- Cabin images hosted on [Supabase Storage](https://supabase.com/storage)
-- Country data from [REST Countries API](https://restcountries.com/)
-- Built as part of a full-stack Next.js learning project
+This project was developed as part of a learning experience in Next.js.
 
+- UI design and project inspiration are derived from Jonas Schmedtmann’s React course 
+- Cabin assets and project structure are used strictly for educational purposes from the same course  
+- Image storage is handled via Supabase Storage  
+- Country data is sourced from REST Countries API  
 ---
 
 <div align="center">
