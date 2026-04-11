@@ -165,7 +165,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Your Supabase database should have the following tables:
 - `cabins` — id, name, maxCapacity, regularPrice, discount, image, description
-- `bookings` — id, startDate, endDate, numNights, numGuests, cabinPrice, totalPrice, cabinId, guestId, status, etc.
+- `bookings` — id, startDate, endDate, numNights, numGuests, cabinPrice, totalPrice, cabinId, guestId, status.
 - `guests` — id, fullName, email, nationality, nationalID, countryFlag
 - `settings` — minBookingLength, maxBookingLength, maxGuestsPerBooking, breakfastPrice
 
