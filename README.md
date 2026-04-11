@@ -247,7 +247,7 @@ Key responsive changes:
 - Multi-column grids stack to single column on mobile
 - Account sidebar switches from vertical (desktop) to horizontal tab bar (mobile)
 - Reservation calendar and form stack vertically on small screens
-- Cabin detail heading transforms disabled on mobile to prevent overflow
+
 
 ---
 
