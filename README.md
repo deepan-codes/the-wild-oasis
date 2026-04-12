@@ -10,10 +10,12 @@ A full-stack Next.js 14 application for browsing and booking luxury cabins in th
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=flat-square&logo=supabase)](https://supabase.com/)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Wild%20Oasis-brightgreen?style=for-the-badge)](https://wildoasisresort.vercel.app/)
-
+[![Live Demo](https://img.shields.io/badge/Live-Demo-3ECF8E?style=flat-square)](https://wildoasisresort.vercel.app/)
 </div>
+---
+## 🌐 Live Demo
 
+👉 https://wildoasisresort.vercel.app/
 ---
 
 ## 📸 Preview
