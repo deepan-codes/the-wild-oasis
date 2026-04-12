@@ -10,7 +10,7 @@ A full-stack Next.js 14 application for browsing and booking luxury cabins in th
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38BDF8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-3ECF8E?style=flat-square&logo=supabase)](https://supabase.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)](LICENSE)
+
 
 </div>
 
@@ -114,7 +114,7 @@ wild-oasis/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/wild-oasis.git
+git clone https://github.com/deepan-codes/wild-oasis.git
 cd wild-oasis
 ```
 
@@ -165,7 +165,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Your Supabase database should have the following tables:
 - `cabins` — id, name, maxCapacity, regularPrice, discount, image, description
-- `bookings` — id, startDate, endDate, numNights, numGuests, cabinPrice, totalPrice, cabinId, guestId, status, etc.
+- `bookings` — id, startDate, endDate, numNights, numGuests, cabinPrice, totalPrice, cabinId, guestId, status.
 - `guests` — id, fullName, email, nationality, nationalID, countryFlag
 - `settings` — minBookingLength, maxBookingLength, maxGuestsPerBooking, breakfastPrice
 
@@ -247,7 +247,7 @@ Key responsive changes:
 - Multi-column grids stack to single column on mobile
 - Account sidebar switches from vertical (desktop) to horizontal tab bar (mobile)
 - Reservation calendar and form stack vertically on small screens
-- Cabin detail heading transforms disabled on mobile to prevent overflow
+
 
 ---
 
@@ -263,21 +263,16 @@ Contributions are welcome! Here's how:
 
 Please follow [Conventional Commits](https://www.conventionalcommits.org/) for commit messages.
 
----
 
-## 📄 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 🙏 Acknowledgements
 
-- Design inspired by luxury alpine retreat aesthetics
-- Cabin images hosted on [Supabase Storage](https://supabase.com/storage)
-- Country data from [REST Countries API](https://restcountries.com/)
-- Built as part of a full-stack Next.js learning project
+This project was developed as part of a learning experience in Next.js.
 
+- UI design and project inspiration are derived from Jonas Schmedtmann’s React course 
+- Cabin assets and project structure are used strictly for educational purposes from the same course  
+- Image storage is handled via Supabase Storage  
+- Country data is sourced from REST Countries API  
 ---
 
 <div align="center">
