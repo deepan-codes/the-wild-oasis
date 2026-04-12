@@ -13,7 +13,7 @@ A full-stack Next.js 14 application for browsing and booking luxury cabins in th
 [![Live Demo](https://img.shields.io/badge/Live-Demo-3ECF8E?style=flat-square)](https://wildoasisresort.vercel.app/)
 </div>
 🌐 Live Demo: https://wildoasisresort.vercel.app/
----
+
 ## 📸 Preview
 
 > The Wild Oasis is a luxury retreat nestled in the Italian Dolomites. Guests can browse cabins, create accounts via Google, make reservations, and manage their bookings — all from a responsive, mobile-first interface.
