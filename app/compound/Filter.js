@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { UsersIcon } from "@heroicons/react/24/solid";
 
 function Filter() {
   const searchParams = useSearchParams();
@@ -29,21 +30,21 @@ function Filter() {
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        2&mdash;3 guests
+        2&mdash;3 <UsersIcon className="h-5 w-5 text-primary-600" />
       </Button>
       <Button
         filter="medium"
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        4&mdash;7 guests
+        4&mdash;7 <UsersIcon className="h-5 w-5 text-primary-600" />
       </Button>
       <Button
         filter="large"
         handleFilter={handleFilter}
         activeFilter={activeFilter}
       >
-        8&mdash;12 guests
+        8&mdash;12 <UsersIcon className="h-5 w-5 text-primary-600" />
       </Button>
     </div>
   );
@@ -52,7 +53,7 @@ function Filter() {
 function Button({ filter, handleFilter, activeFilter, children }) {
   return (
     <button
-      className={`px-2 sm:px-5  border-r border-primary-800  py-2 text-sm sm:text-base hover:bg-primary-700 ${
+      className={`px-2 sm:px-5 flex gap-1 border-r border-primary-800  py-2 text-sm sm:text-base hover:bg-primary-700 ${
         filter === activeFilter ? "bg-primary-700 text-primary-50" : ""
       }`}
       onClick={() => handleFilter(filter)}
