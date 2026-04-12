@@ -1,10 +1,11 @@
 import { getCabins } from "../_lib/data-service";
 import CabinCard from "../compound/CabinCard";
 import Filter from "../compound/Filter";
-
+import { revalidatePath } from "next/cache";
 export const metadata = {
   title: "Cabin",
 };
+export const revalidate = 0;
 export default async function Page({ searchParams }) {
   // CHANGE
   const filter = searchParams?.capacity ?? "all";
@@ -21,7 +22,7 @@ export default async function Page({ searchParams }) {
     );
   if (filter === "large")
     displayedCabins = cabins.filter((cabin) => cabin.maxCapacity >= 8);
-
+  revalidatePath("/cabins");
   return (
     <div>
       <h1 className="text-4xl mb-5 text-accent-400 font-medium">
@@ -41,8 +42,8 @@ export default async function Page({ searchParams }) {
       </div>
       {displayedCabins.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 xl:gap-14">
-          {cabins.map((cabin) => (
-            <CabinCard cabin={cabin} key={cabin.id} filter={filter} />
+          {displayedCabins.map((cabin) => (
+            <CabinCard cabin={cabin} key={cabin.id} />
           ))}
         </div>
       )}
