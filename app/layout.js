@@ -5,6 +5,7 @@ import "./_style/globals.css";
 import { Josefin_Sans } from "next/font/google";
 import { ReservationProvider } from "../app/compound/ReservationContext";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -32,6 +33,7 @@ function layout({ children }) {
             <ReservationProvider>{children}</ReservationProvider>
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
